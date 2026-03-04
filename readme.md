@@ -65,6 +65,9 @@ OPENAI_API_KEY=your_openrouter_api_key
 - Creates a complete chain: `prompts | lm | out`
 - Strips unnecessary metadata from LLM responses
 
+### 8. Memory Management
+- That how our model remembers our chat history there uses ony loop and list approach to provide basic idea
+
 ## Key Examples
 
 ### Basic Query
@@ -92,6 +95,7 @@ print(result)
 - How to create and use prompt templates for dynamic prompts
 - How to compose LLM operations into reusable chains
 - How to parse and format LLM outputs
+- How to manage memory in basic form
 - Best practices for structuring LLM applications
 
 ## Files

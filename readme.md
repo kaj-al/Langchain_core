@@ -88,6 +88,13 @@ chain = prompts | lm | StrOutputParser()
 result = chain.invoke({"language": "hindi", "query": "I am a girl"})
 print(result) 
 ```
+### Stream responses
+```python
+lm = ChatOpenAI(model="openai/gpt-4o", base_url="https://openrouter.ai/api/v1", streaming=True)
+ans = lm.stream("What is langchain?")
+for chunk in ans:
+    print(chunk.content,end=" ")
+```
 
 ## Outcomes
 
@@ -96,6 +103,8 @@ print(result)
 - How to compose LLM operations into reusable chains
 - How to parse and format LLM outputs
 - How to manage memory in basic form
+- How we provide structure to our response
+- How we can see realtime responses with help of streaming
 - Best practices for structuring LLM applications
 
 ## Files
